@@ -1,0 +1,54 @@
+\hypertarget{pin_config_8c}{}\section{Source/pin\+Config.c File Reference}
+\label{pin_config_8c}\index{Source/pinConfig.c@{Source/pinConfig.c}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pin_config_8c_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+C\+PU}}~12000000\+UL
+\item 
+\#define \mbox{\hyperlink{pin_config_8c_ac16a222c648fdce7e5eb4f7e6cdb4d9d}{delay}}~0.\+05
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pin_config_8c_a5e94e0fd1e5a500bbf68cff3d3545e08}{pin\+Configuration}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pin_config_8c_ac16a222c648fdce7e5eb4f7e6cdb4d9d}\label{pin_config_8c_ac16a222c648fdce7e5eb4f7e6cdb4d9d}} 
+\index{pinConfig.c@{pinConfig.c}!delay@{delay}}
+\index{delay@{delay}!pinConfig.c@{pinConfig.c}}
+\subsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily \#define delay~0.\+05}
+
+\mbox{\Hypertarget{pin_config_8c_a43bafb28b29491ec7f871319b5a3b2f8}\label{pin_config_8c_a43bafb28b29491ec7f871319b5a3b2f8}} 
+\index{pinConfig.c@{pinConfig.c}!F\_CPU@{F\_CPU}}
+\index{F\_CPU@{F\_CPU}!pinConfig.c@{pinConfig.c}}
+\subsubsection{\texorpdfstring{F\_CPU}{F\_CPU}}
+{\footnotesize\ttfamily \#define F\+\_\+\+C\+PU~12000000\+UL}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pin_config_8c_a5e94e0fd1e5a500bbf68cff3d3545e08}\label{pin_config_8c_a5e94e0fd1e5a500bbf68cff3d3545e08}} 
+\index{pinConfig.c@{pinConfig.c}!pinConfiguration@{pinConfiguration}}
+\index{pinConfiguration@{pinConfiguration}!pinConfig.c@{pinConfig.c}}
+\subsubsection{\texorpdfstring{pinConfiguration()}{pinConfiguration()}}
+{\footnotesize\ttfamily void pin\+Configuration (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Initializing the pins of port B and port D in which the pins (B1 \& D3) is used for clock and (B2 \& D2) is used for sending and recieveing Data. 
+\end{DoxyItemize}-\/$>$ Calculating the time frequency using delay(0.\+05ms)
+
+-\/$>$ Use pin P\+B1 and P\+B2 as O/P.
+
+-\/$>$ Use pin P\+D2 and P\+D3 as I/P.
+
+-\/$>$ Mode 4, C\+TC on O\+C\+R1A
+
+-\/$>$ Set interrupt on compare match
+
+-\/$>$ set prescaler to 1024 and start the timer 

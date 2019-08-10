@@ -1,0 +1,48 @@
+\hypertarget{uart_8h}{}\section{Source/\+U\+A\+R\+T/uart.h File Reference}
+\label{uart_8h}\index{Source/UART/uart.h@{Source/UART/uart.h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{uart_8h_a0c0ca72359ddf28dcd15900dfba19343}{uart\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{uart_8h_a019dea3402543f1b12a16a3fb75c414a}{uart\+\_\+put\+Char}} (char c)
+\begin{DoxyCompactList}\small\item\em -\/$>$ Enable RX and TX \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{uart_8h_a569b5935d1fbd86e158496fd4748d514}{uart\+\_\+\+String}} (char $\ast$string)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{uart_8h_a0c0ca72359ddf28dcd15900dfba19343}\label{uart_8h_a0c0ca72359ddf28dcd15900dfba19343}} 
+\index{uart.h@{uart.h}!uart\_init@{uart\_init}}
+\index{uart\_init@{uart\_init}!uart.h@{uart.h}}
+\subsubsection{\texorpdfstring{uart\_init()}{uart\_init()}}
+{\footnotesize\ttfamily void uart\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is used to initialize U\+A\+RT configuration. 
+\end{DoxyItemize}\mbox{\Hypertarget{uart_8h_a019dea3402543f1b12a16a3fb75c414a}\label{uart_8h_a019dea3402543f1b12a16a3fb75c414a}} 
+\index{uart.h@{uart.h}!uart\_putChar@{uart\_putChar}}
+\index{uart\_putChar@{uart\_putChar}!uart.h@{uart.h}}
+\subsubsection{\texorpdfstring{uart\_putChar()}{uart\_putChar()}}
+{\footnotesize\ttfamily void uart\+\_\+put\+Char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+-\/$>$ Enable RX and TX 
+
+
+\begin{DoxyItemize}
+\item This function call is to put data to the minicom console.
+\item This function is used for transmitting data to the Minicom console. 
+\end{DoxyItemize}-\/$>$ Wait until data register empty \mbox{\Hypertarget{uart_8h_a569b5935d1fbd86e158496fd4748d514}\label{uart_8h_a569b5935d1fbd86e158496fd4748d514}} 
+\index{uart.h@{uart.h}!uart\_String@{uart\_String}}
+\index{uart\_String@{uart\_String}!uart.h@{uart.h}}
+\subsubsection{\texorpdfstring{uart\_String()}{uart\_String()}}
+{\footnotesize\ttfamily void uart\+\_\+\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to get array of all the character.
+\item This function is used to get the character from User and to place it in a char array named as string. 
+\end{DoxyItemize}

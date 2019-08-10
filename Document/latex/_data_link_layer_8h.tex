@@ -1,0 +1,47 @@
+\hypertarget{_data_link_layer_8h}{}\section{Source/\+Layer2/\+Data\+Link\+Layer.h File Reference}
+\label{_data_link_layer_8h}\index{Source/Layer2/DataLinkLayer.h@{Source/Layer2/DataLinkLayer.h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_data_link_layer_8h_ad54ff8dbd274014a0cc6b9058e09cec3}{Intialize}} ()
+\item 
+void \mbox{\hyperlink{_data_link_layer_8h_a8b72cd9e4cf2fc7f4f17179d4bad00dc}{Send}} ()
+\item 
+void \mbox{\hyperlink{_data_link_layer_8h_a4460e7297ef3bdfce49a7f9a1f81c84b}{Recieve}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_data_link_layer_8h_ad54ff8dbd274014a0cc6b9058e09cec3}\label{_data_link_layer_8h_ad54ff8dbd274014a0cc6b9058e09cec3}} 
+\index{DataLinkLayer.h@{DataLinkLayer.h}!Intialize@{Intialize}}
+\index{Intialize@{Intialize}!DataLinkLayer.h@{DataLinkLayer.h}}
+\subsubsection{\texorpdfstring{Intialize()}{Intialize()}}
+{\footnotesize\ttfamily void Intialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to initialize the send and recieve buffer. 
+\end{DoxyItemize}\mbox{\Hypertarget{_data_link_layer_8h_a4460e7297ef3bdfce49a7f9a1f81c84b}\label{_data_link_layer_8h_a4460e7297ef3bdfce49a7f9a1f81c84b}} 
+\index{DataLinkLayer.h@{DataLinkLayer.h}!Recieve@{Recieve}}
+\index{Recieve@{Recieve}!DataLinkLayer.h@{DataLinkLayer.h}}
+\subsubsection{\texorpdfstring{Recieve()}{Recieve()}}
+{\footnotesize\ttfamily void Recieve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to read the data bit by bit. 
+\end{DoxyItemize}\mbox{\Hypertarget{_data_link_layer_8h_a8b72cd9e4cf2fc7f4f17179d4bad00dc}\label{_data_link_layer_8h_a8b72cd9e4cf2fc7f4f17179d4bad00dc}} 
+\index{DataLinkLayer.h@{DataLinkLayer.h}!Send@{Send}}
+\index{Send@{Send}!DataLinkLayer.h@{DataLinkLayer.h}}
+\subsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily void Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to send data bit by bit.
+\item This function is used to send the data bit by bit to the given destination address.
+\item The send\+Byte\+Counter is compared with the bytes\+To\+Send if it doesn\textquotesingle{}t match than the send\+Byte\+Counter is incremented, if it is matched then the sendlock is initialized to 0 which means we are stopping the transmission.
+\item This function also checks the forwardflag if it is 1, which means there a message which we have to forward so we need to give priority to the forward message and then the data which is in temp\+Buffer is copied to the send\+Buffer and it is forwarded. 
+\end{DoxyItemize}-\/$>$ Checking if there is any data to forward or not.
+
+-\/$>$ Copying the tempbuffer to the send\+Buffer. 

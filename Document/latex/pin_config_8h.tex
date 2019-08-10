@@ -1,0 +1,31 @@
+\hypertarget{pin_config_8h}{}\section{Source/pin\+Config.h File Reference}
+\label{pin_config_8h}\index{Source/pinConfig.h@{Source/pinConfig.h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pin_config_8h_adedee92f991cc2759c9540c11ea1c357}{pin\+Configuration}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pin_config_8h_adedee92f991cc2759c9540c11ea1c357}\label{pin_config_8h_adedee92f991cc2759c9540c11ea1c357}} 
+\index{pinConfig.h@{pinConfig.h}!pinConfiguration@{pinConfiguration}}
+\index{pinConfiguration@{pinConfiguration}!pinConfig.h@{pinConfig.h}}
+\subsubsection{\texorpdfstring{pinConfiguration()}{pinConfiguration()}}
+{\footnotesize\ttfamily pin\+Configuration (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to pinconfiguration() for configuring the P\+O\+RT B and P\+O\+RT D.
+\item Initializing the pins of port B and port D in which the pins (B1 \& D3) is used for clock and (B2 \& D2) is used for sending and recieveing Data. 
+\end{DoxyItemize}-\/$>$ Calculating the time frequency using delay(0.\+05ms)
+
+-\/$>$ Use pin P\+B1 and P\+B2 as O/P.
+
+-\/$>$ Use pin P\+D2 and P\+D3 as I/P.
+
+-\/$>$ Mode 4, C\+TC on O\+C\+R1A
+
+-\/$>$ Set interrupt on compare match
+
+-\/$>$ set prescaler to 1024 and start the timer 

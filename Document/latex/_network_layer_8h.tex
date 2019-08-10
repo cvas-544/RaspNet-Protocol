@@ -1,0 +1,39 @@
+\hypertarget{_network_layer_8h}{}\section{Source/\+Layer3/\+Network\+Layer.h File Reference}
+\label{_network_layer_8h}\index{Source/Layer3/NetworkLayer.h@{Source/Layer3/NetworkLayer.h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{_network_layer_8h_ab3cc72128b02d06442b184c13555712c}{payload\+\_\+data}} (uint8\+\_\+t $\ast$R\+Buffer)
+\item 
+\mbox{\hyperlink{_network_layer_8h_a90a7bf935757587d959239731a8d21e4}{crc\+\_\+check}} (uint32\+\_\+t C\+R\+Ccheck, uint8\+\_\+t source1, uint8\+\_\+t $\ast$Rec\+Buffer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_network_layer_8h_a90a7bf935757587d959239731a8d21e4}\label{_network_layer_8h_a90a7bf935757587d959239731a8d21e4}} 
+\index{NetworkLayer.h@{NetworkLayer.h}!crc\_check@{crc\_check}}
+\index{crc\_check@{crc\_check}!NetworkLayer.h@{NetworkLayer.h}}
+\subsubsection{\texorpdfstring{crc\_check()}{crc\_check()}}
+{\footnotesize\ttfamily crc\+\_\+check (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{C\+R\+Ccheck,  }\item[{uint8\+\_\+t}]{source1,  }\item[{uint8\+\_\+t $\ast$}]{Rec\+Buffer }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to check whether the data recieved is correct or not. This function takes the computed C\+RC value, recieved buffer and the source address as parameters and returns the numerical values (0,1,2) when the soruce and destination address are compared to each other. The returned values are sent to the data link layer.
+\item This function is used to check whether the data recieved is correct or not. This function takes the computed C\+RC value, recieved buffer and the source address as parameters and returns the numerical values (0,1,2) when the soruce and destination address are compared to each other. The returned values are sent to the data link layer. 
+\end{DoxyItemize}-\/$>$ Copying the crc which is recieved to the temp\+C\+RC
+
+-\/$>$ If the recieved destination address matches my address then it means broadcast is completed.
+
+-\/$>$ If the recieved destination address is 0 then the message has to be forwarded.
+
+-\/$>$ If the recieved destination address is not matching with the source address then the message has to be forwarded. \mbox{\Hypertarget{_network_layer_8h_ab3cc72128b02d06442b184c13555712c}\label{_network_layer_8h_ab3cc72128b02d06442b184c13555712c}} 
+\index{NetworkLayer.h@{NetworkLayer.h}!payload\_data@{payload\_data}}
+\index{payload\_data@{payload\_data}!NetworkLayer.h@{NetworkLayer.h}}
+\subsubsection{\texorpdfstring{payload\_data()}{payload\_data()}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ payload\+\_\+data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{R\+Buffer }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to extract the payload from the recieved buffer, which is sent to the data link layer from where it is being called.
+\item This function is used to extract the payload from the recieved buffer, which is sent to the data link layer from where it is being called. 
+\end{DoxyItemize}-\/$>$ Copying the payload to the temporary buffer called Buffer. 

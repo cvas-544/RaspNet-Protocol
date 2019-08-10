@@ -1,0 +1,84 @@
+\hypertarget{main_8c}{}\section{Source/main.c File Reference}
+\label{main_8c}\index{Source/main.c@{Source/main.c}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Interrupt\+Service\+Routine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Data\+Link\+Layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Physical\+Layer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pin\+Config.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\item 
+void \mbox{\hyperlink{main_8c_a0a6b8b8b3a7799145e14d0eb8ce6e674}{init\+Value}} ()
+\item 
+void \mbox{\hyperlink{main_8c_ae58f973227bed2ce6a22eb4a13f76c32}{user\+Input}} ()
+\item 
+void \mbox{\hyperlink{main_8c_aacded1eb5b043e37c41e4745e9069156}{user\+Destination\+Input}} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{main_8c_a3892d6499fcc9add20cfcae7a0e3bcb1}{send\+Data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a0a6b8b8b3a7799145e14d0eb8ce6e674}\label{main_8c_a0a6b8b8b3a7799145e14d0eb8ce6e674}} 
+\index{main.c@{main.c}!initValue@{initValue}}
+\index{initValue@{initValue}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{initValue()}{initValue()}}
+{\footnotesize\ttfamily void init\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function is used for performing function calls of \mbox{\hyperlink{main_8c_ae58f973227bed2ce6a22eb4a13f76c32}{user\+Input()}}, \mbox{\hyperlink{main_8c_aacded1eb5b043e37c41e4745e9069156}{user\+Destination\+Input()}}, \mbox{\hyperlink{_physical_layer_8c_abdc7388a6e3639dcd2045e63e11bc093}{frame\+Initializer()}}. 
+\end{DoxyItemize}\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Here we are Calling the \mbox{\hyperlink{pin_config_8c_a5e94e0fd1e5a500bbf68cff3d3545e08}{pin\+Configuration()}}, \mbox{\hyperlink{uart_8h_a0c0ca72359ddf28dcd15900dfba19343}{uart\+\_\+init()}}, intialize(), initvalue().
+\item Pinconfiguration() is used for initializing the pins, \mbox{\hyperlink{uart_8h_a0c0ca72359ddf28dcd15900dfba19343}{uart\+\_\+init()}} is used for initializing the U\+A\+RT, \mbox{\hyperlink{_data_link_layer_8c_a25a40b6614565f755233080a384c35f1}{initialize()}} is used for initializing the send and recieve buffers, and initvalue() is used for calling functions -\/ \mbox{\hyperlink{main_8c_ae58f973227bed2ce6a22eb4a13f76c32}{user\+Input()}}, \mbox{\hyperlink{main_8c_aacded1eb5b043e37c41e4745e9069156}{user\+Destination\+Input()}}, \mbox{\hyperlink{_physical_layer_8c_abdc7388a6e3639dcd2045e63e11bc093}{frame\+Initializer()}}.
+\item User\+Input() is used for getting input message form user using Minicom console, \mbox{\hyperlink{main_8c_aacded1eb5b043e37c41e4745e9069156}{user\+Destination\+Input()}} is used for getting destination address statically from user, and framinitializer() is called for initializing the send buffer. 
+\end{DoxyItemize}-\/$>$ Initializing the pins
+
+-\/$>$ Initializing U\+A\+RT.
+
+-\/$>$ Enables interrupts.
+
+-\/$>$ Intializing the send and recieve buffers.
+
+-\/$>$ Main loop \mbox{\Hypertarget{main_8c_aacded1eb5b043e37c41e4745e9069156}\label{main_8c_aacded1eb5b043e37c41e4745e9069156}} 
+\index{main.c@{main.c}!userDestinationInput@{userDestinationInput}}
+\index{userDestinationInput@{userDestinationInput}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{userDestinationInput()}{userDestinationInput()}}
+{\footnotesize\ttfamily void user\+Destination\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function is used for getting destination address from user using Minicom console. 
+\end{DoxyItemize}\mbox{\Hypertarget{main_8c_ae58f973227bed2ce6a22eb4a13f76c32}\label{main_8c_ae58f973227bed2ce6a22eb4a13f76c32}} 
+\index{main.c@{main.c}!userInput@{userInput}}
+\index{userInput@{userInput}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{userInput()}{userInput()}}
+{\footnotesize\ttfamily void user\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function is used for getting input message from user using Minicom console. 
+\end{DoxyItemize}
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a3892d6499fcc9add20cfcae7a0e3bcb1}\label{main_8c_a3892d6499fcc9add20cfcae7a0e3bcb1}} 
+\index{main.c@{main.c}!sendData@{sendData}}
+\index{sendData@{sendData}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{sendData}{sendData}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ send\+Data}
+

@@ -1,0 +1,39 @@
+\hypertarget{_c_r_c_8h}{}\section{Source/\+C\+R\+C/\+C\+RC.h File Reference}
+\label{_c_r_c_8h}\index{Source/CRC/CRC.h@{Source/CRC/CRC.h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_c_r_c_8h_a74024ac46495d4cc30039635534935cc}{crc32b}} (uint8\+\_\+t $\ast$message, int p\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_c_r_c_8h_a74024ac46495d4cc30039635534935cc}\label{_c_r_c_8h_a74024ac46495d4cc30039635534935cc}} 
+\index{CRC.h@{CRC.h}!crc32b@{crc32b}}
+\index{crc32b@{crc32b}!CRC.h@{CRC.h}}
+\subsubsection{\texorpdfstring{crc32b()}{crc32b()}}
+{\footnotesize\ttfamily uint32\+\_\+t crc32b (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{Psize }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is used to calculate 32 bit C\+RC, which takes the payload compute and returns it. The returned 32 bit C\+RC is used to check whether the recieved C\+RC is correct or not.
+\item This function calculates 32 bit C\+RC, which takes the payload compute and returns it. The returned 32 bit C\+RC is used to check whether the recieved C\+RC is correct or not. 
+\end{DoxyItemize}-\/$>$ Take the polynomial to a 32 bit variable.
+
+-\/$>$ C\+RC will be null initially.
+
+-\/$>$ Variable to check C\+RC is calculated for all characters in the message.
+
+-\/$>$ When message has a character or Psize is not zero.
+
+-\/$>$ Perform X\+OR operation of C\+RC with character in the message converted to 32 bit character.
+
+-\/$>$ Run the loop 8 times.
+
+-\/$>$ If M\+SB of C\+RC is 1, right shift crc by 1 and X\+OR with polynomial.
+
+-\/$>$ If M\+SB of C\+RC is 0, just right shift C\+RC by 1.
+
+-\/$>$ Increment n by 1 to take the next character of the message.
+
+-\/$>$ Return the final computed 32 bit C\+RC. 

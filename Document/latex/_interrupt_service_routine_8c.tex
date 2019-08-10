@@ -1,0 +1,46 @@
+\hypertarget{_interrupt_service_routine_8c}{}\section{Source/\+I\+S\+Q/\+Interrupt\+Service\+Routine.c File Reference}
+\label{_interrupt_service_routine_8c}\index{Source/ISQ/InterruptServiceRoutine.c@{Source/ISQ/InterruptServiceRoutine.c}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Data\+Link\+Layer.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_interrupt_service_routine_8c_ad39420cdd896dd12c68e36313139d0a5}{I\+SR}} (T\+I\+M\+E\+R1\+\_\+\+C\+O\+M\+P\+A\+\_\+vect)
+\item 
+\mbox{\hyperlink{_interrupt_service_routine_8c_aa64c6dce15e9de9105b4ae9533c9a267}{I\+SR}} (P\+C\+I\+N\+T0\+\_\+vect)
+\item 
+\mbox{\hyperlink{_interrupt_service_routine_8c_a9c4665742c6b6eb1f0bb9dde41f7cba3}{I\+SR}} (P\+C\+I\+N\+T2\+\_\+vect)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_interrupt_service_routine_8c_ad39420cdd896dd12c68e36313139d0a5}\label{_interrupt_service_routine_8c_ad39420cdd896dd12c68e36313139d0a5}} 
+\index{InterruptServiceRoutine.c@{InterruptServiceRoutine.c}!ISR@{ISR}}
+\index{ISR@{ISR}!InterruptServiceRoutine.c@{InterruptServiceRoutine.c}}
+\subsubsection{\texorpdfstring{ISR()}{ISR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily I\+SR (\begin{DoxyParamCaption}\item[{T\+I\+M\+E\+R1\+\_\+\+C\+O\+M\+P\+A\+\_\+vect}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Interrupt service routine for the timer, so that it will perform the toggling event ie. toogling P\+O\+R\+TB, in every clock cycle. 
+\end{DoxyItemize}-\/$>$ Toggling B1 port for every clock cycle \mbox{\Hypertarget{_interrupt_service_routine_8c_aa64c6dce15e9de9105b4ae9533c9a267}\label{_interrupt_service_routine_8c_aa64c6dce15e9de9105b4ae9533c9a267}} 
+\index{InterruptServiceRoutine.c@{InterruptServiceRoutine.c}!ISR@{ISR}}
+\index{ISR@{ISR}!InterruptServiceRoutine.c@{InterruptServiceRoutine.c}}
+\subsubsection{\texorpdfstring{ISR()}{ISR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily I\+SR (\begin{DoxyParamCaption}\item[{P\+C\+I\+N\+T0\+\_\+vect}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Interrupt service routine for the sending data at every clock cycle. And it will send data bitwise from the send buffer, that is done by calling send(). 
+\end{DoxyItemize}\mbox{\Hypertarget{_interrupt_service_routine_8c_a9c4665742c6b6eb1f0bb9dde41f7cba3}\label{_interrupt_service_routine_8c_a9c4665742c6b6eb1f0bb9dde41f7cba3}} 
+\index{InterruptServiceRoutine.c@{InterruptServiceRoutine.c}!ISR@{ISR}}
+\index{ISR@{ISR}!InterruptServiceRoutine.c@{InterruptServiceRoutine.c}}
+\subsubsection{\texorpdfstring{ISR()}{ISR()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily I\+SR (\begin{DoxyParamCaption}\item[{P\+C\+I\+N\+T2\+\_\+vect}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Interrupt service routine for the recieving data at every clock cycle. And it will recieve data bitwise from the recieve buffer, that is done by calling \mbox{\hyperlink{_data_link_layer_8c_ad00d93c6d424d2a9793d5e605f1381f9}{recieve()}}. 
+\end{DoxyItemize}

@@ -1,0 +1,32 @@
+\hypertarget{_physical_layer_8h}{}\section{Source/\+Layer1/\+Physical\+Layer.h File Reference}
+\label{_physical_layer_8h}\index{Source/Layer1/PhysicalLayer.h@{Source/Layer1/PhysicalLayer.h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{_physical_layer_8h_a2c64d325745b0ba1b9e71372cbf14d4a}{frame\+Initializer}} (uint8\+\_\+t \mbox{\hyperlink{_data_link_layer_8c_a42676c2cae17bc2fa151feea9e192342}{destination}}, uint8\+\_\+t \mbox{\hyperlink{_data_link_layer_8c_a36a99c772ae64e186f5264a662834eef}{source}}, uint8\+\_\+t size)
+\item 
+\mbox{\hyperlink{_physical_layer_8h_a9776047f54f99d9bfe0705700920ffd3}{is\+Frame\+Valid}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_physical_layer_8h_a2c64d325745b0ba1b9e71372cbf14d4a}\label{_physical_layer_8h_a2c64d325745b0ba1b9e71372cbf14d4a}} 
+\index{PhysicalLayer.h@{PhysicalLayer.h}!frameInitializer@{frameInitializer}}
+\index{frameInitializer@{frameInitializer}!PhysicalLayer.h@{PhysicalLayer.h}}
+\subsubsection{\texorpdfstring{frameInitializer()}{frameInitializer()}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ frame\+Initializer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{destination,  }\item[{uint8\+\_\+t}]{source,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to initialize the send frame. 
+\end{DoxyItemize}\mbox{\Hypertarget{_physical_layer_8h_a9776047f54f99d9bfe0705700920ffd3}\label{_physical_layer_8h_a9776047f54f99d9bfe0705700920ffd3}} 
+\index{PhysicalLayer.h@{PhysicalLayer.h}!isFrameValid@{isFrameValid}}
+\index{isFrameValid@{isFrameValid}!PhysicalLayer.h@{PhysicalLayer.h}}
+\subsubsection{\texorpdfstring{isFrameValid()}{isFrameValid()}}
+{\footnotesize\ttfamily is\+Frame\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item This function call is to copy the send\+Buffer frame to temp\+Buffer frame and returns the tempbuffer.
+\item This function is used to copy the send\+Buffer frame to temp\+Buffer frame and we are returing the temp\+Buffer. 
+\end{DoxyItemize}
